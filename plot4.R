@@ -26,7 +26,7 @@ data1 <- data[data$Date %in% c("1/2/2007", "2/2/2007"),]
 #convert the Date and Time variables to Date/Time classes
 data1$DateTime <- strptime(paste(data1$Date, data1$Time, sep=" "), format = "%d/%m/%Y %H:%M:%S")
 
-#construction plot4
+#construction plot4 (width = 480, height = 480 default measurments of the device)
 png(filename="plot4.png")
 par(mfrow=c(2,2))
 plot(data1$DateTime, data1$Global_active_power,  type="l", col="black", xlab="", ylab="Global Active Power")
