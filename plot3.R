@@ -26,7 +26,7 @@ data1 <- data[data$Date %in% c("1/2/2007", "2/2/2007"),]
 #convert the Date and Time variables to Date/Time classes
 data1$DateTime <- strptime(paste(data1$Date, data1$Time, sep=" "), format = "%d/%m/%Y %H:%M:%S")
 
-#construction  plot3
+#construction  plot3 (width = 480, height = 480 default measurments of the device)
 png(filename = "plot3.png")
 labels <- c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 linecolor <- c("black", "red", "blue")
